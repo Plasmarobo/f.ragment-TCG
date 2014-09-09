@@ -1,0 +1,12 @@
+{
+  "name"        : "Fault",
+  "description" : "User Error: Replace User",
+  "up_link"     : "in",
+  "down_link"   : "out",
+  "left_link"   : "in",
+  "right_link"  : "in",
+  "locked"      : false,
+  "inject"      : false,
+  "push"        : false,
+  "rule"        : "faults = faults + 1"
+}

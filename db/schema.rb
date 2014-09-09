@@ -18,14 +18,8 @@ ActiveRecord::Schema.define(version: 20140908214128) do
     t.boolean  "discarded"
     t.integer  "hand_id"
     t.integer  "game_id"
-    t.string   "card_name"
-    t.integer  "actiondeck_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "actiondecks", force: true do |t|
-    t.integer  "game_id"
+    t.string   "name"
+    t.string   "json"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -42,14 +36,8 @@ ActiveRecord::Schema.define(version: 20140908214128) do
   create_table "goal_cards", force: true do |t|
     t.string   "card_name"
     t.integer  "hand_id"
-    t.integer  "goaldeck_id"
     t.integer  "game_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "goaldecks", force: true do |t|
-    t.integer  "game_id"
+    t.string    "json"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -68,18 +56,12 @@ ActiveRecord::Schema.define(version: 20140908214128) do
     t.boolean  "locked"
     t.integer  "hand_id"
     t.string   "card_name"
-    t.integer  "pathdeck_id"
     t.integer  "game_id"
     t.integer  "up_slot"
     t.integer  "down_slot"
     t.integer  "left_slot"
     t.integer  "right_slot"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "pathdecks", force: true do |t|
-    t.integer  "game_id"
+    t.string   "json"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

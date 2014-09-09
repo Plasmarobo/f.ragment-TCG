@@ -8,8 +8,11 @@ class GameController < ApplicationController
     pathdeck = Pathdeck.new({game_id: @game})
     actiondeck = Actiondeck.new({game_id: @game})
     goaldeck = Goaldeck.new({game_id: @game})
-    require 'json'
-    
+    if(pathdeck.save() && actiondeck.save() && goaldeck.save())
+      deck_json = File.read("cards/#{@game.deck_name}.json")
+      @game.InstanceDeck(deck_json)
+    else
+    end
 
   end
 
@@ -21,6 +24,6 @@ class GameController < ApplicationController
 
   private
     def game_params
-      params.require(:settings).permit(:name, :owner, :deck_name. :root_card)
+      params.require(:settings).permit(:name, :owner, :deck_name, :root_card)
     end
 end

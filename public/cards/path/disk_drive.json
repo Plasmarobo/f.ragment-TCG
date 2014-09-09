@@ -1,0 +1,12 @@
+{
+  "name"        : "Disk Drive",
+  "description" : "Slow data access",
+  "up_link"     : "in out",
+  "down_link"   : "in out",
+  "left_link"   : "in out",
+  "right_link"  : "in out",
+  "locked"      : true,
+  "inject"      : false,
+  "push"        : true,
+  "rule"        : ""
+}

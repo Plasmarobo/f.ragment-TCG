@@ -1,0 +1,13 @@
+{
+  "name"        : "Memory",
+  "description" : "Connects adjacent modules (left-right, top-bottom) when flipped",
+  "up_link"     : "in out",
+  "down_link"   : "in out",
+  "left_link"   : "in out",
+  "right_link"  : "in out",
+  "locked"      : false,
+  "inject"      : false,
+  "push"        : true,
+  "rule"        : "memory = memory + 1"
+}
+

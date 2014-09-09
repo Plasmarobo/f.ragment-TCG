@@ -1,0 +1,12 @@
+{
+  "name"        : "Firewall",
+  "description" : "Harison ford should stick to scifi",
+  "up_link"     : "in",
+  "down_link"   : "out",
+  "left_link"   : "blocked",
+  "right_link"  : "blocked",
+  "locked"      : true,
+  "inject"      : false,
+  "push"        : false,
+  "rule"        : "firewall = firewall + 1"
+}

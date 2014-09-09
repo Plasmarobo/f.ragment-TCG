@@ -1,0 +1,12 @@
+{
+  "name"        : "Link",
+  "description" : "To the past...",
+  "up_link"     : "in out",
+  "down_link"   : "in out",
+  "left_link"   : "in out",
+  "right_link"  : "in out",
+  "locked"      : false,
+  "inject"      : true,
+  "push"        : false,
+  "rule"        : ""
+}

@@ -1,0 +1,13 @@
+{
+  "name"        : "Reboot",
+  "description" : "Cut the power. CUT THE POWER!",
+  "up_link"     : "out",
+  "down_link"   : "in",
+  "left_link"   : "in",
+  "right_link"  : "in",
+  "locked"      : false,
+  "inject"      : false,
+  "push"        : true,
+  "rule"        : "memory.each {|mem| mem.flip()}"
+}
+

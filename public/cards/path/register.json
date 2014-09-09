@@ -1,0 +1,13 @@
+{
+  "name"        : "Register",
+  "description" : "Register all data!",
+  "up_link"     : "in out",
+  "down_link"   : "in out",
+  "left_link"   : "in out",
+  "right_link"  : "in out",
+  "locked"      : true,
+  "inject"      : true,
+  "push"        : true,
+  "rule"        : "moves = 0"
+}
+
