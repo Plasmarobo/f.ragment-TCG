@@ -10,7 +10,7 @@ class PathCard < ActiveRecord::Base
     when "both"
       img = "leftright64.png"
     when "blocked"
-      img = "blocked64.png"
+      img = "block64.png"
     else
       img = "error.png"
     end
@@ -27,7 +27,7 @@ class PathCard < ActiveRecord::Base
     when "both"
       img = "leftright64.png"
     when "blocked"
-      img = "blocked64.png"
+      img = "block64.png"
     else
       img = "error.png"
     end
@@ -44,7 +44,7 @@ class PathCard < ActiveRecord::Base
     when "both"
       img = "updown64.png"
     when "blocked"
-      img = "blocked64.png"
+      img = "block64.png"
     else
       img = "error.png"
     end
@@ -61,7 +61,7 @@ class PathCard < ActiveRecord::Base
     when "both"
       img = "updown64.png"
     when "blocked"
-      img = "blocked64.png"
+      img = "block64.png"
     else
       img = "error.png"
     end
