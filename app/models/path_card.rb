@@ -1,5 +1,8 @@
 class PathCard < ActiveRecord::Base
 
+  belongs_to :game_instance
+  belongs_to :hand
+
   def right_icon_tag
     img = ""
     case self.right_link

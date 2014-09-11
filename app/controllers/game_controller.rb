@@ -5,15 +5,9 @@ class GameController < ApplicationController
   def new
     @game = Game.new(game_params)
     #Create new decks
-    pathdeck = Pathdeck.new({game_id: @game})
-    actiondeck = Actiondeck.new({game_id: @game})
-    goaldeck = Goaldeck.new({game_id: @game})
-    if(pathdeck.save() && actiondeck.save() && goaldeck.save())
-      deck_json = File.read("cards/#{@game.deck_name}.json")
-      @game.InstanceDeck(deck_json)
-    else
-    end
-
+    deck_json = File.read("cards/#{@game.deck_name}.json")
+    @game.InstanceDeck(deck_json)
+    
   end
 
   def play

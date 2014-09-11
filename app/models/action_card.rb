@@ -1,4 +1,6 @@
 class ActionCard < ActiveRecord::Base
+  belongs_to :game_instance
+  belongs_to :hand
 
   def Load(name)
     self.json = File.read("cards/action/#{filename}.json"))
@@ -7,6 +9,6 @@ class ActionCard < ActiveRecord::Base
   def InstanceAgainst(game)
     self.played = false
     self.discarded = false
-    self.game = game
+    self.game_instance = game
   end
 end
