@@ -45,3 +45,13 @@ end
 # gem 'debugger', group: [:development, :test]
 
 gem 'haml-rails'
+
+gem 'cancancan'
+
+gem 'devise'
+
+gem 'figaro'
+
+gem 'bootstrap-sass'
+
+gem 'autoprefixer-rails'

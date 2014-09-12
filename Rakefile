@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-FRagment::Application.load_tasks
+FRagmentTcg::Application.load_tasks
