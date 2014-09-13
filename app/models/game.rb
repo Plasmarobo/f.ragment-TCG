@@ -1,6 +1,6 @@
 class Game < ActiveRecord::Base
   has_many :cards
-  has_many :users
+  has_many :players
   belongs_to :owner, class_name: :User
   has_one :root_card, class_name: :Card, foreign_key: :root_card_id
 

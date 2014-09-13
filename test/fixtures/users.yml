@@ -18,3 +18,33 @@ guest:
   last_sign_in_ip: nil
   created_at: 0
   updated_at: 0
+
+user_1:
+  name: player1
+  email: magic@magic.com
+  encrypted_password: 000
+  reset_password_token: nil
+  reset_password_sent_at: nil
+  remember_created_at: nil
+  sign_in_count: 0
+  current_sign_in_at: nil
+  last_sign_in_at: nil
+  current_sign_in_ip: nil
+  last_sign_in_ip: nil
+  created_at: 0
+  updated_at: 0
+
+user_2:
+  name: player2
+  email: magic@magic.com
+  encrypted_password: 000
+  reset_password_token: nil
+  reset_password_sent_at: nil
+  remember_created_at: nil
+  sign_in_count: 0
+  current_sign_in_at: nil
+  last_sign_in_at: nil
+  current_sign_in_ip: nil
+  last_sign_in_ip: nil
+  created_at: 0
+  updated_at: 0

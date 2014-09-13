@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140913200858) do
+ActiveRecord::Schema.define(version: 20140913220145) do
 
   create_table "cards", force: true do |t|
     t.integer  "game_id"
@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 20140913200858) do
 
   create_table "moves", force: true do |t|
     t.integer  "game_id"
-    t.integer  "user_id"
+    t.integer  "player_id"
     t.integer  "card_id"
     t.string   "location"
     t.datetime "created_at"
@@ -43,6 +43,13 @@ ActiveRecord::Schema.define(version: 20140913200858) do
   end
 
   add_index "moves", ["sequence"], name: "index_moves_on_sequence"
+
+  create_table "players", force: true do |t|
+    t.integer  "game_id"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "name",                                null: false

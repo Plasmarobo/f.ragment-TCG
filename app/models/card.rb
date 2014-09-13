@@ -1,7 +1,7 @@
 class Card < ActiveRecord::Base
   require 'json'
   belongs_to :game
-  belongs_to :user
+  has_one :player
 
   def Load
     #Build path

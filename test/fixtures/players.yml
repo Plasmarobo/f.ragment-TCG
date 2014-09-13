@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+player0:
+  game: game_one
+  user: guest
+
+
+player_1:
+  game: game_one
+  user: user_1
+
+player_2:
+  game: game_one
+  user: user_2
