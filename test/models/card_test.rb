@@ -29,4 +29,5 @@ class CardTest < ActiveSupport::TestCase
     assert card.user.name == "magic"
     assert card.game.name == "BasicGame"
   end
+  
 end
