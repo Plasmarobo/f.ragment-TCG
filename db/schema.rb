@@ -11,9 +11,41 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140912172043) do
+ActiveRecord::Schema.define(version: 20140913200858) do
+
+  create_table "cards", force: true do |t|
+    t.integer  "game_id"
+    t.integer  "user_id"
+    t.string   "card_type"
+    t.string   "name"
+    t.string   "json"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "games", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "root_card_id"
+    t.string   "name"
+    t.string   "deck"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "moves", force: true do |t|
+    t.integer  "game_id"
+    t.integer  "user_id"
+    t.integer  "card_id"
+    t.string   "location"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "sequence"
+  end
+
+  add_index "moves", ["sequence"], name: "index_moves_on_sequence"
 
   create_table "users", force: true do |t|
+    t.string   "name",                                null: false
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
     t.string   "reset_password_token"
@@ -29,6 +61,7 @@ ActiveRecord::Schema.define(version: 20140912172043) do
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["name"], name: "index_users_on_name", unique: true
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
 end

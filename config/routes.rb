@@ -1,4 +1,14 @@
 FRagmentTcg::Application.routes.draw do
+  get "archive/list"
+  get "archive/replay"
+  get "cards/show"
+  get "cards/list"
+  get "games/new"
+  get "games/manage"
+  get "games/delete"
+  get "games/public"
+  get "games/friends"
+  get "games/admin"
   devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
