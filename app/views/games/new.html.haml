@@ -1,2 +1,25 @@
-%h1 Games#new
-%p Find me in app/views/games/new.html.haml
+%h1 Configure Game:
+.form-group
+  = form_for @game do |f|
+    .form-group
+      = f.label :owner, class: "form-control"
+      %br
+      .form-control
+        = @game.user
+        f.hidden_field :user_id, value: @game.user.id
+
+    .form-group
+      = f.label :name, class: "form-control"
+      %br
+      = f.text_field :name, placeholder: "#{@game.user.name}'s game", class: "form-control"
+    .form-group
+      = f.label :deck, class: "form-control"
+      %br
+      = f.select :deck, @decks.collect {|deck|, [deck, deck]}, class: "form-control"
+    .form-group
+      Private? (Invite only)
+      %br
+      = f.check_box :private
+    .form-group
+      = f.submit "Submit", class: "form-control"
+

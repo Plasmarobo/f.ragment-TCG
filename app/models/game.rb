@@ -2,6 +2,7 @@ class Game < ActiveRecord::Base
   has_many :cards
   has_many :players
   has_many :moves
+  has_many :invitations
   belongs_to :user
   has_one :root_card, class_name: :Card
 
@@ -40,6 +41,35 @@ class Game < ActiveRecord::Base
       return {status: "success", message: "Successfully updated #{self.name}"}
     else
       return {status: "alert", message: "Failed to update #{self.name}"}
+    end
+  end
+
+  def is_invited?(user)
+    invitations = Invitations.find(:all, conditions: {game_id: self.id, user_id: user.id})
+    return invitations > 0
+  end
+
+  def rowstyle
+    #Switch css styles based on relations
+    if !current_user.nil?
+      if current_user.id == game.user.id
+        return "info"
+      else
+        if self.is_invited?(current_user)
+          return "success"
+        else
+          if game.private
+            if current_user.has_friend(self.user)
+              return "warning"  
+            else
+              return "danger"
+            end
+          else
+            #Shouldn't get here. Private games aren't listed
+            return ""
+          end
+        end
+      end
     end
   end
 end

@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   validates_uniqueness_of :name, case_sensistive: false
   has_many :players
   has_many :friends
+  has_many :invitations
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
