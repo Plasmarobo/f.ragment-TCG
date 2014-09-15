@@ -32,9 +32,9 @@
                 = link_to "Manage", '/games/manage'
           - if user_signed_in?
             %li
-              = link_to "#{current_user.name}", controller: :users, action: :account
+              = link_to "#{current_user.name}", '/users/account'
             %li
-              = link_to "Logout", contoller: :users, action: :logout
+              = link_to "Logout", destroy_user_session_path, :method => :delete
           - else
             .navbar-right
               %form.navbar-form{role: "login", url: user_session_path}

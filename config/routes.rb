@@ -1,4 +1,6 @@
 FRagmentTcg::Application.routes.draw do
+  get "account/manage"
+  get "account/friends"
   get "play/commit"
   post "play/commit"
   get "play/board"
