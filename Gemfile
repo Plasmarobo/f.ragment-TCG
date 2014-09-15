@@ -51,7 +51,3 @@ gem 'cancancan'
 gem 'devise'
 
 gem 'figaro'
-
-gem 'bootstrap-sass'
-
-gem 'autoprefixer-rails'

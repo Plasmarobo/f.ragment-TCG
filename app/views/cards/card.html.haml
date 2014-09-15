@@ -1,2 +1,33 @@
 .f_ragment_card
-  
+  .f_ragment_card_row
+    .f_ragment_card_double_cell
+    .f_ragment_card_single_cell
+      %img{src: "#{card.upLink}"}
+    .f_ragment_card_double_cell
+  .f_ragment_card_row
+    .f_ragment_card_single_cell
+    .f_ragment_card_triple_cell.f_ragment_card_name
+      = card.getName
+    .f_ragment_card_single_cell
+  .f_ragment_card_double_row
+    .f_ragment_card_double_vert_cell
+      .f_ragment_card_single_cell
+        %img{src: "#{card.leftLink}"}
+      .f_ragment_card_single_cell
+    .f_ragment_card_double_triple
+      = card.getFlavortext
+      - if card.locked?
+        %img{src: "cards/icon/lock64.png"}
+      - if card.inject?
+        %img{src: "cards/icon/inject64.png"}
+      - if card.push?
+        %img{src: "cards/icon/push64.png"}
+    .f_ragment_card_double_vert_cell
+      .f_ragment_card_single_cell
+        %img{src: "#{card.rightLink}"}
+      .f_ragment_card_single_cell
+  .f_ragment_card_row
+    .f_ragment_card_double_cell
+    .f_ragment_card_single_cell
+      %img{src: "#{card.downLink}"}
+    .f_ragment_card_double_cell

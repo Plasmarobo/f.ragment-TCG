@@ -5,6 +5,9 @@ class GamesController < ApplicationController
   def manage
   end
 
+  def play
+  end
+
   def delete
   end
 

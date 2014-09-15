@@ -1,2 +1,7 @@
-%h1 Cards#list
-%p Find me in app/views/cards/list.html.haml
+.container
+  - @cards.each do |card|
+    .row{type: card.type, name: card.name}
+      .col-md-6
+        = card.type
+      .col-md-6
+        = card.name

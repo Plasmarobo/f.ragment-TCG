@@ -8,7 +8,7 @@ guest:
   name: magic
   email: magic@magic.com
   encrypted_password: 000
-  reset_password_token: nil
+  reset_password_token: 005
   reset_password_sent_at: nil
   remember_created_at: nil
   sign_in_count: 0
@@ -21,9 +21,9 @@ guest:
 
 user_1:
   name: player1
-  email: magic@magic.com
-  encrypted_password: 000
-  reset_password_token: nil
+  email: magic1@magic.com
+  encrypted_password: 001
+  reset_password_token: 004
   reset_password_sent_at: nil
   remember_created_at: nil
   sign_in_count: 0
@@ -36,9 +36,9 @@ user_1:
 
 user_2:
   name: player2
-  email: magic@magic.com
-  encrypted_password: 000
-  reset_password_token: nil
+  email: magic2@magic.com
+  encrypted_password: 002
+  reset_password_token: 003
   reset_password_sent_at: nil
   remember_created_at: nil
   sign_in_count: 0

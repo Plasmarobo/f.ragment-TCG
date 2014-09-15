@@ -2,6 +2,6 @@
 
 game_one:
   user: guest
-  root_card: card_command
+  root_card_id: card_command
   name: BasicGame
   deck: standard

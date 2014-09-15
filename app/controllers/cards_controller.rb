@@ -3,5 +3,10 @@ class CardsController < ApplicationController
   end
 
   def list
+    @cards = Cards.all
+
+    respond_to do |format|
+      format.html
+    end
   end
 end

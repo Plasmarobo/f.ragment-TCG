@@ -2,24 +2,24 @@
 
 card_command:
   game: game_one
-  user_id: nil
+  player_id: nil
   card_type: path
   name: command
 
 card_memory:
   game: game_one
-  user_id: nil
+  player_id: nil
   card_type: path
   name: memory
 
 card_action:
   game: game_one
-  user: guest
+  player: player_0
   card_type: action
   name: delete
 
 card_goal:
   game: game_one
-  user_id: nil
+  player_id: nil
   card_type: goal
-  name: delete
+  name: hack

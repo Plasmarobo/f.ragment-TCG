@@ -2,6 +2,6 @@
 
 one:
   game: game_one
-  user: guest
-  card: card_command
+  player: player_1
+  card_id: card_command
   location: "0,0"

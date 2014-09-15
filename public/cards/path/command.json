@@ -6,8 +6,8 @@
   "left_link"   : "both",
   "right_link"  : "both",
   "locked"      : false,
-  "inject"      : false,
-  "push"        : false,
-  "rule"        : ""
+  "inject"      : true,
+  "push"        : true,
+  "rule"        : "start_card"
 }
 

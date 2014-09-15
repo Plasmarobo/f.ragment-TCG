@@ -1,5 +1,5 @@
 class Move < ActiveRecord::Base
-  has_one :game
-  has_one :player
+  belongs_to :game
+  belongs_to :player
   has_one :card
 end

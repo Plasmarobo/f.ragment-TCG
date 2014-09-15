@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20140913220145) do
 
   create_table "cards", force: true do |t|
     t.integer  "game_id"
-    t.integer  "user_id"
+    t.integer  "player_id"
     t.string   "card_type"
     t.string   "name"
     t.string   "json"

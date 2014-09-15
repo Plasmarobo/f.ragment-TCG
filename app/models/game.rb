@@ -1,8 +1,9 @@
 class Game < ActiveRecord::Base
   has_many :cards
   has_many :players
-  belongs_to :owner, class_name: :User
-  has_one :root_card, class_name: :Card, foreign_key: :root_card_id
+  has_many :moves
+  belongs_to :user
+  has_one :root_card, class_name: :Card
 
   require 'json'
 
@@ -39,5 +40,6 @@ class Game < ActiveRecord::Base
       return {status: "success", message: "Successfully updated #{self.name}"}
     else
       return {status: "alert", message: "Failed to update #{self.name}"}
+    end
   end
 end
