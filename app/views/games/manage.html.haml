@@ -1,3 +1,6 @@
 %h1 
   Managing: 
   = @game.name
+.invitations
+  = render partial: 'invitations/form', locals: {invite: Invitation.new}
+  
