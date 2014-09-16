@@ -5,7 +5,7 @@
       = f.label :owner, class: "form-control"
       %br
       .form-control
-        = @game.user
+        = @game.user.name
         f.hidden_field :user_id, value: @game.user.id
 
     .form-group
@@ -15,7 +15,7 @@
     .form-group
       = f.label :deck, class: "form-control"
       %br
-      = f.select :deck, @decks.collect {|deck|, [deck, deck]}, class: "form-control"
+      = f.select :deck, @decks.collect {|deck| [deck, deck]}, class: "form-control"
     .form-group
       Private? (Invite only)
       %br
