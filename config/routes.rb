@@ -1,29 +1,4 @@
 FRagmentTcg::Application.routes.draw do
-  get "account/manage"
-  get "account/friends"
-  get "play/commit"
-  post "play/commit"
-  get "play/board"
-  post "play/board"
-  get "landing/home"
-  get "landing/about"
-  get "landing/tos"
-  get "landing/privacy"
-  get "landing/contact"
-  get "archive/list"
-  get "archive/replay"
-  get "cards/show"
-  get "cards/list"
-  get "games/new"
-  get "games/play"
-  get "games/manage"
-  get "games/delete"
-  get "games/public"
-  get "games/friends"
-  get "games/admin"
-  devise_for :users
-
-  root 'landing#home'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
