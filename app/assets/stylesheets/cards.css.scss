@@ -1,0 +1,67 @@
+// Place all the styles related to the cards controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.f_ragment_card
+{
+  width: 320px;
+  height: 320px;
+}
+
+.f_ragment_card_row
+{
+  width: auto;
+  height: 64px;
+  pad: 0;
+  margin: 0;
+  float:left;
+}
+
+.f_ragment_card_double_cell
+{
+  height: 64px;
+  width: 128px;
+  pad: 0;
+  margin: 0;
+  float: left;
+}
+
+.f_ragment_card_single_cell
+{
+  width: 64px;
+  height: 64px;
+  float: left;
+}
+
+.f_ragment_card_triple_cell
+{
+  width: 192px;
+  height: 64px;
+  float: left;
+}
+
+.f_ragment_card_name
+{
+  font-weight: 24pt;
+}
+
+.f_ragment_card_double_row
+{
+  height: 128px;
+  width: auto;
+  float: left;
+}
+
+.f_ragment_card_double_vert_cell
+{
+  height: 128px;
+  width: 64px;
+  float:left;
+}
+
+.f_ragment_card_double_triple
+{
+  height: 128px;
+  width: 192px;
+  float: left;
+}
+  

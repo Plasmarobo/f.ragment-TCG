@@ -1,0 +1,12 @@
+%h1
+  Delete
+  = @game.name
+  !?
+%p Deleting a game cannot be undone. We will not be able to help you and will not answer emails relating to deleted games. Please be sure you are ready for the responsiblity of deleting a game. 
+= form_tag(url_for(action: :delete,id: @game.id), method: "POST") do
+  .form-group
+    Type DELETE to remove game
+    %br
+    = text_field_tag :confirm, class: "form-control"
+  .form-group
+    = submit_tag "Continue"

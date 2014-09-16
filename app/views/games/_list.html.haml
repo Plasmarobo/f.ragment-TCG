@@ -1,0 +1,22 @@
+%table.table.table-hover.table-condensed
+  %thead
+    %tr
+      %th
+        Name
+      %th
+        Owner
+      %th
+      %th
+  %tbody
+  -games.each do | game |
+    %tr{class: game.rowstyle}
+      %td
+        = game.name
+      %td
+        = game.user.name
+      %td
+        = button_to "Play", url_for(action: :play, id: game.id), disabled: (!game.private?) || (current_user.id == game.user.id) || (game.invited?(current_user))
+      %td
+        = button_to "Manage", url_for(action: :manage, id: game.id),disabled: (current_user.id == game.user.id)
+    
+
