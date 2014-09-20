@@ -5,7 +5,9 @@ class GamesController < ApplicationController
   def new
     @game = Game.new
     @game.user = current_user
-    @decks = Dir["/public/cards/*.json"]
+    Dir.chdir("#{Rails.root.to_s}/public/cards/") do
+      @decks = Dir["*.json"]
+    end
   end
 
   def create

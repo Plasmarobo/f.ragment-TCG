@@ -5,8 +5,10 @@ class Card < ActiveRecord::Base
 
   def Load
     if self.json.nil?
-      path = "public/cards/#{self.card_type}/#{self.name}.json"
+      path = "#{Rails.root.to_s}/public/cards/#{self.card_type}/#{self.name}.json"
+      puts "Tried to read #{path}"
       self.json = File.read(path)
+      puts "JSON: #{self.json}"
       self.save
     end
     @info = JSON.parse(self.json)

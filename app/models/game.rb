@@ -9,11 +9,9 @@ class Game < ActiveRecord::Base
   require 'json'
 
   def Load
-    deck_json = JSON.Parse(File.read("cards/#{self.deck}.json"))
+    deck_json = JSON.parse(File.read("#{Rails.root.to_s}/public/cards/#{self.deck}"))
     #Load root card
-    card = Card.new({card_type: :path})
-    card.name = deck_json.root
-    card.game = self
+    card = Card.new({card_type: "path", name: deck_json["root"], game_id: self.id})
     card.Load()
     if !card.save()
       #Error
@@ -22,7 +20,7 @@ class Game < ActiveRecord::Base
     self.root_card = card
 
     #Instance other cards
-    deck_json.cards.each_pair do | type, collection |
+    deck_json["cards"].each_pair do | type, collection |
       collection.each do | card_name, count |
         card = Card.new({card_type: type})
         card.name = card_name

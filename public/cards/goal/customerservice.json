@@ -1,0 +1,10 @@
+{
+	"name" : "Customer Service",
+	"description" : ["Move PC to End < 35p >",
+           "Avoid inconveniences:",
+					 "For each Firewall < -5p >",
+					 "For each Memory < -5p >",
+           "For each Disk Drive < -5p >"
+					],
+	"rule" : "path.each {|card| points += (card.name == 'End') ? 35 : (card.name == 'Firewall' || card.name == 'Memory' || card.name == 'Disk Drive') ? : -5 : 0 }"
+}

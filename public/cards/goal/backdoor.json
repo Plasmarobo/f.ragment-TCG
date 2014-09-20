@@ -1,0 +1,5 @@
+{
+	"name" : "Backdoor", 
+	"description" : ["Move PC to End < 20p >", "For each Firewall in path < -10p >"],
+	"rule" : "path.each {|card| points -= (card.name == 'Firewall') ? -10 : 0"
+}

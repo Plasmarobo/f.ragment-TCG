@@ -2,20 +2,19 @@
 .form-group
   = form_for @game do |f|
     .form-group
-      = f.label :owner, class: "form-control"
+      = f.label :owner
       %br
-      .form-control
-        = @game.user.name
-        f.hidden_field :user_id, value: @game.user.id
+      = @game.user.name
+      = f.hidden_field :user_id, value: @game.user.id
 
     .form-group
-      = f.label :name, class: "form-control"
+      = f.label :name
       %br
-      = f.text_field :name, placeholder: "#{@game.user.name}'s game", class: "form-control"
+      = f.text_field :name, value: "#{@game.user.name}'s game", class: "form-control"
     .form-group
-      = f.label :deck, class: "form-control"
+      = f.label :deck
       %br
-      = f.select :deck, @decks.collect {|deck| [deck, deck]}, class: "form-control"
+      = f.select :deck, @decks.collect {|deck| [deck.chomp(File.extname(deck)).capitalize, deck]}, class: "form-control"
     .form-group
       Private? (Invite only)
       %br
