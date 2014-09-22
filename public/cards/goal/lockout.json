@@ -1,5 +1,6 @@
 {
-	"name" : "",
-	"description" : [],
+	"name" : "Lockout",
+	"description" : ["Prevent the dirty hackers!",
+									 ""],
 	"rule" : ""
 }
