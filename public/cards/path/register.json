@@ -8,6 +8,7 @@
   "locked"      : true,
   "inject"      : true,
   "push"        : true,
-  "rule"        : "moves = 0"
+  "rule"        : "moves = 0",
+  "onhit"       : ""
 }
 

@@ -1,5 +1,8 @@
 {
 	"name" : "Reboot",
-	"description" : [],
-	"rule" : ""
+	"description" : [
+										"Reboot the system!",
+										"Move PC to Reboot < 10p >"
+									],
+	"rule" : "score.in_path({'Reboot' => 10})"
 }

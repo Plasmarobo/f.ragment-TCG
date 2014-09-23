@@ -1,6 +1,6 @@
 {
   "name"        : "Command",
-  "description" : "The lurking prompt",
+  "description" : ["The lurking prompt"],
   "up_link"     : "both",
   "down_link"   : "both",
   "left_link"   : "both",
@@ -8,6 +8,6 @@
   "locked"      : false,
   "inject"      : true,
   "push"        : true,
-  "rule"        : "start_card"
+  "rule"        : "PC.start"
 }
 

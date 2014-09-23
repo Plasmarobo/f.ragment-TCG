@@ -8,5 +8,6 @@
   "locked"      : false,
   "inject"      : false,
   "push"        : true,
-  "rule"        : ""
+  "rule"        : "",
+  "onhit"       : ""
 }

@@ -1,5 +1,10 @@
 {
 	"name" : "Crash",
-	"description" : ["Move PC to Memory <5p>","And then move PC to Fault <5p>"],
-	"rule" : "points += ((((path.count {|card| card.name == 'Memory'}) > 0) ? 5 : 0) + (((path.count {|card| card.name == 'Fault'}) > 1) ? 5 : 0))"
+	"description" : [
+	  "Crash the system!",
+	  "Complete the following in order:",
+		"Move PC to Memory < 5p >",
+		"Move PC to Fault < 5p >"
+		],
+	"rule" : "score.in_order({'Memory' => 5, 'Fault' => 5})"
 }

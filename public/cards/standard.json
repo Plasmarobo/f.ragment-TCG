@@ -9,7 +9,8 @@
       "delete" : 4,
       "rename" : 3,
       "rescue" : 2,
-      "run" : 20
+      "run" : 4,
+      "shift" : 4 
     },
     "path" :
     {
@@ -21,7 +22,7 @@
       "memory" : 8,
       "reboot" : 4,
       "register" : 4,
-      "connector" : 10
+      "connector" : 5
     },
     "goal" :
     {

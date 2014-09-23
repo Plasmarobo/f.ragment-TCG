@@ -1,6 +1,11 @@
 {
 	"name" : "Lockout",
 	"description" : ["Prevent the dirty hackers!",
-									 ""],
-	"rule" : ""
+									 "Complete steps in order:"
+									 "Move PC to FIREWALL < 5p >",
+									 "Move PC to FAULT < 10p >",
+									 "Move PC to END < 5p >",
+									 "For each MEMORY in path: < -5p >"
+									 ],
+	"rule" : "score.in_order({'Firewall' => 5, 'Fault' => 10, 'End' => 5}).in_path({'Memory' => -5})"
 }

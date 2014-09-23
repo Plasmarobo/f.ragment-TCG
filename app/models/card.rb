@@ -114,8 +114,8 @@ class Card < ActiveRecord::Base
     if @info.nil?
       self.Load
     end
-
-    return @info["description"]
+    haml = ""
+    return @info["description"].each { |line| ".f_fragment_flavor_line #{line}"}
   end
 
   def locked?

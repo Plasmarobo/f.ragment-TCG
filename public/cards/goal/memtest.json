@@ -1,5 +1,8 @@
 {
 	"name" : "Memtest",
-	"description" : [],
-	"rule" : ""
+	"description" : [
+										"Test the system memory",
+										"For each Memory in path < 5p >"
+									],
+	"rule" : "score.in_path({'Memory' => 5})"
 }
