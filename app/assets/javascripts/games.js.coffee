@@ -6,7 +6,7 @@
 #Prototypes & submits moves
 
 
-tryShiftBoard(dir) ->
+tryShiftBoard = (dir) ->
 
 shiftBoard = (dir) ->
 
