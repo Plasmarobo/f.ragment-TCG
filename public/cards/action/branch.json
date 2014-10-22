@@ -1,3 +1,9 @@
 {
-	"rule" : "PC.skip"
+	"name" : "Branch",
+	"description" : [
+		"Move PC 2",
+		"First move doesn't trigger effects"
+	],
+	"rule" : "actions.queue_free.queue_move"
+
 }

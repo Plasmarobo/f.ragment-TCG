@@ -5,7 +5,6 @@
     "action" :
     {
       "branch" : 4,
-      "coffeespill" : 2,
       "delete" : 4,
       "rename" : 3,
       "rescue" : 2,

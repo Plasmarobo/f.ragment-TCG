@@ -1,0 +1,8 @@
+{
+	"name" : "Unplug",
+	"description" : [
+		"Yank the plug!",
+		"Flip every face-up memory on the board"
+	],
+	"rule" : "board.memories.flip"
+}

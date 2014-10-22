@@ -1,8 +1,8 @@
 {
 	"name" : "Crash",
 	"description" : [
-	  "Crash the system!",
-	  "Complete the following in order:",
+	    "Crash the system!",
+	    "Complete the following in order:",
 		"Move PC to Memory < 5p >",
 		"Move PC to Fault < 5p >"
 		],

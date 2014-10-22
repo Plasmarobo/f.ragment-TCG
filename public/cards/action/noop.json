@@ -1,0 +1,8 @@
+{
+	"name" : "Noop",
+	"description" : [
+		"Moves may not be queued until your next turn"
+	],
+	"rule" : "actions.lock_moves('turn')"
+
+}

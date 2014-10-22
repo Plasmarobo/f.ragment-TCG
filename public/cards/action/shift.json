@@ -1,3 +1,7 @@
 {
-	
+	"name" : "Shift",
+	"description" : [
+		"Shift a row 1"
+	],
+	"rule" : "actions.queue_shift"
 }

@@ -32,4 +32,54 @@ module GamesHelper
 		end
 		
 	end
+
+	class Actions
+		@actions = nil
+		@path = nil
+    @moves_locked = false
+    @trigger
+
+		def initialize(path)
+			@path = path
+		end
+
+		def queue_move
+      if not @moves_locked
+			  @actions.push("move")
+      end
+			self
+		end
+
+		def queue_free
+      if not @moves_locked
+			  @action.push("free_move")
+      end
+			self
+		end
+
+		def queue_shift
+			@action.push("shift")
+      self
+    end
+
+    def queue_flip
+      @action.push("flip")
+      self
+    end
+
+    def queue_unflip
+      @action.push("unflip")
+      self
+    end
+
+    def lock_moves
+      @moves_locked = true
+      self
+    end
+
+    def unlock_moves
+      @moves_locked = false
+      self
+    end
+	end
 end
