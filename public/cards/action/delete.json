@@ -1,6 +1,7 @@
 {
-	"name" : "Coffee Spill",
+	"name" : "Delete",
 	"description" : [
+    "Remove a card from the grid and discard it"
 	],
-	"rule" : ""
+	"rule" : "actions.queue_target.queue_discard"
 }

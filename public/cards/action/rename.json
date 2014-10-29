@@ -1,6 +1,7 @@
 {
-	"name" : "Coffee Spill",
+	"name" : "Rename",
 	"description" : [
+    "Move any card on the grid to an open edge"
 	],
-	"rule" : ""
+	"rule" : "actions.queue_target.queue_place_edge"
 }

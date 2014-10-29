@@ -37,7 +37,7 @@ module GamesHelper
 		@actions = nil
 		@path = nil
     @moves_locked = false
-    @trigger
+    @triggers
 
 		def initialize(path)
 			@path = path
@@ -52,12 +52,14 @@ module GamesHelper
 
 		def queue_free
       if not @moves_locked
-			  @action.push("free_move")
+        @action.push("free")
+			  @action.push("move")
       end
 			self
 		end
 
 		def queue_shift
+      @action.push("row_or_col")
 			@action.push("shift")
       self
     end
@@ -79,6 +81,33 @@ module GamesHelper
 
     def unlock_moves
       @moves_locked = false
+      self
+    end
+
+    def queue_target
+      @action.push("set_target")
+      self
+    end
+
+    def queue_discard
+      @action.push("discard")
+      self
+    end
+
+    def queue_edge_place
+      @action.push("edge")
+      @action.push("place")
+      self
+    end
+
+    def queue_swap
+      @action.push("swap")
+      self
+    end
+
+    def queue_free_place
+      @action.push("free")
+      @action.push("swap")
       self
     end
 	end
